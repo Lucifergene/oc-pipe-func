@@ -1,0 +1,23 @@
+specVersion: 0.34.0
+name: hello-func-node
+runtime: node
+registry: ''
+image: ''
+invocation:
+  format: http
+build:
+  buildpacks: []
+  builder: s2i
+  buildEnvs: []
+run:
+  volumes: []
+  envs:
+  - name: MY_API_KEY
+    value: '12345'
+deploy:
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
